@@ -36,7 +36,7 @@ npm start
 #### UserViews
 - **GET** `/api/user-views` - To fetch all user views for all products  
 - **POST** `/api/user-views` : To add new user view for a product
-- **GET** `/api/user-views/:productId` : To fetch analytics as per 
+- **GET** `/api/user-views/:productId` : To fetch analytics as per product
 
 
 ### Let talk more about, how to test **/api/user-views/:productID**
