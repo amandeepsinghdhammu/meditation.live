@@ -1,0 +1,30 @@
+{
+  "name": "meditation.live",
+  "version": "1.0.0",
+  "description": "A test task to to fetch data from a mongodb collection using daily/weekly/monthly/CustomDate filter",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amandeepsinghdhammu/meditation.live.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Node"
+  ],
+  "author": "Amandeep Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amandeepsinghdhammu/meditation.live/issues"
+  },
+  "homepage": "https://github.com/amandeepsinghdhammu/meditation.live#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.10.15"
+  }
+}
