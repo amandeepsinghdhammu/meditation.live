@@ -1,7 +1,7 @@
 # meditation.live
-A test task to to fetch data from a mongodb collection using daily/weekly/monthly/CustomDate filter. 
+A test task to fetch data from a mongodb collection(UserView) using daily/weekly/monthly/CustomDate filter. 
 
-To achieve this task, I've created **CRUD** for below collections. Major end point is `/api/user-views/:productId`, which will produce the desire output.
+To achieve this task, I've created **CRUD** for below collections. Major end point is `/api/user-views/stats/:productId`, which will produce the desired output.
 
 ### Installation Instructions
 
@@ -36,16 +36,16 @@ npm start
 #### UserViews
 - **GET** `/api/user-views` - To fetch all user views for all products  
 - **POST** `/api/user-views` : To add new user view for a product
-- **GET** `/api/user-views/:productId` : To fetch analytics as per product
+- **GET** `/api/user-views/stats/:productId` : To fetch analytics as per product
 
 
-### Let talk more about, how to test **/api/user-views/:productID**
+### Lets talk more about, how to test **/api/user-views/stats/:productID**
 
 - To fetch `totalUsers` and `totalUniqueUsers` as per `productId` with `filter=day`
 
 ##### Request:
 
-```GET "/api/user-views/:productId?filter=day"```
+```GET "/api/user-views/stats/:productId?filter=day"```
 
 ##### Response:
 
@@ -53,7 +53,8 @@ npm start
 ```json
 {
     "totalUsers": "6",
-    "totalUniqueUsers": "2" 
+    "totalUniqueUsers": "2",
+    "filterBy": "day" 
 }
 ```
 
@@ -61,7 +62,7 @@ npm start
 
 ##### Request:
 
-```GET "/api/user-views/:productId?filter=week"```
+```GET "/api/user-views/stats/:productId?filter=week"```
 
 ##### Response:
 
@@ -69,7 +70,8 @@ npm start
 ```json
 {
     "totalUsers": "8",
-    "totalUniqueUsers": "4" 
+    "totalUniqueUsers": "4",
+    "filterBy": "week"
 }
 ```
 
@@ -77,7 +79,7 @@ npm start
 
 ##### Request:
 
-```GET "/api/user-views/:productId?filter=month"```
+```GET "/api/user-views/stats/:productId?filter=month"```
 
 ##### Response:
 
@@ -85,15 +87,16 @@ npm start
 ```json
 {
     "totalUsers": "10",
-    "totalUniqueUsers": "5" 
+    "totalUniqueUsers": "5",
+    "filterBy": "month"
 }
 ```
 
-- To fetch `totalUsers` and `totalUniqueUsers` as per `productId` with custom date `startDate`, `endDate` in format `dd-mm-yyyy`
+- To fetch `totalUsers` and `totalUniqueUsers` as per `productId` with custom date `startDate`, `endDate` in format `yyyy-mm-dd`
 
 ##### Request:
 
-```GET "/api/user-views/:productId?startDate=22-10-2020&endDate=22-11-2020"```
+```GET "/api/user-views/stats/:productId?startDate=2020-10-22&endDate=2020-11-22"```
 
 ##### Response:
 
@@ -101,6 +104,7 @@ npm start
 ```json
 {
     "totalUsers": "10",
-    "totalUniqueUsers": "5" 
+    "totalUniqueUsers": "5",
+    "filterBy": "date"
 }
 ```
