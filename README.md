@@ -5,7 +5,7 @@ To achieve this task, I've created **CRUD** for below collections. Major end poi
 
 ### Tested Dependencies
 - NodeJs >= 12.18.3
-- Mongo >= 4.4.2
+- MongoDb >= 4.4.2
 
 ### Installation Instructions
 
