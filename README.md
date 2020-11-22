@@ -1,5 +1,5 @@
 # meditation.live
-A test task to fetch data from a mongodb collection(UserView) using daily/weekly/monthly/CustomDate filter. 
+A test task to fetch data from a mongodb collection(**UserView**) using **daily/weekly/monthly/CustomDate** filter. 
 
 To achieve this task, I've created **CRUD** for below collections. Major end point is `/api/user-views/stats/:productId`, which will produce the desired output.
 
