@@ -3,6 +3,10 @@ A test task to fetch data from a mongodb collection(**UserView**) using **daily/
 
 To achieve this task, I've created **CRUD** for below collections. Major end point is `/api/user-views/stats/:productId`, which will produce the desired output.
 
+### Tested Dependencies
+- NodeJs >= 12.18.3
+- Mongo >= 4.4.2
+
 ### Installation Instructions
 
 ```
